@@ -27,8 +27,11 @@
         content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self'; img-src 'self' data:; connect-src 'none';">
 
     <!-- Favicon -->
-    <!-- FAVICON: Add your favicon.ico to assets/images/ -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="alternate icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- Theme: load FIRST to prevent flash of wrong theme -->
+    <script src="assets/js/theme.js"></script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -75,6 +78,10 @@
                 <li role="none"><a href="#certifications" class="nav__link" role="menuitem">Certifications</a></li>
                 <li role="none"><a href="#contact" class="nav__link" role="menuitem">Contact</a></li>
             </ul>
+            <!-- Theme toggle -->
+            <button class="nav__theme-toggle" id="themeToggle" type="button" aria-label="Switch to light mode">
+                <i class="fas fa-sun" aria-hidden="true"></i>
+            </button>
             <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
                 type="button">
                 <span></span>
@@ -524,7 +531,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <p>&copy; 2025 Ahmar Muzaffar. Crafted with passion &amp; code.</p>
+        <p>&copy; 2026 Ahmar Muzaffar. Crafted with passion &amp; code.</p>
     </footer>
 
     <!-- Scripts -->
