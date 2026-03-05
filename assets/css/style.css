@@ -13,6 +13,9 @@ html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: var(--color-accent-cyan) var(--color-bg);
+    /* Part 1 of fix: root owns the horizontal clip so body's overflow
+       context doesn't swallow child scroll events on mobile */
+    overflow-x: hidden;
 }
 
 body {
@@ -1283,9 +1286,14 @@ section {
 .certifications__row {
     display: flex;
     gap: 2rem;
-    overflow-x: auto;
+    /* 'scroll' instead of 'auto' — guarantees a scroll container on mobile */
+    overflow-x: scroll;
     padding: 1rem 0 2rem;
     scroll-snap-type: x mandatory;
+    /* keeps horizontal swipe inside the row, prevents page scroll bleed */
+    overscroll-behavior-x: contain;
+    /* explicitly claim horizontal touch gestures */
+    touch-action: pan-x;
     -webkit-overflow-scrolling: touch;
 }
 
