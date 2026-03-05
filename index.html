@@ -1,0 +1,534 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO & Deployment Meta -->
+    <title>Ahmar Muzaffar | Portfolio</title>
+    <meta name="description"
+        content="Ahmar Muzaffar — Computer Science student at Air University, Trainee Engineer MIS at NHA, Full-Stack Developer &amp; AI enthusiast.">
+    <meta name="author" content="Ahmar Muzaffar">
+    <meta name="theme-color" content="#0A0E1A">
+    <meta name="referrer" content="no-referrer">
+    <link rel="canonical" href="https://ahmarhoonmein.github.io/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Ahmar Muzaffar | Portfolio">
+    <meta property="og:description"
+        content="CS undergraduate at Air University, Trainee Engineer (MIS) at NHA, Full-Stack Developer &amp; AI enthusiast.">
+    <meta property="og:url" content="https://ahmarhoonmein.github.io/">
+    <meta property="og:site_name" content="Ahmar Muzaffar Portfolio">
+
+    <!-- Security -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com; script-src 'self'; img-src 'self' data:; connect-src 'none';">
+
+    <!-- Favicon -->
+    <!-- FAVICON: Add your favicon.ico to assets/images/ -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor__trail" id="cursorTrail" aria-hidden="true"></div>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="nav__overlay" id="navOverlay" role="dialog" aria-modal="true" aria-label="Navigation Menu">
+        <ul class="nav__overlay-links" role="menubar">
+            <li role="none"><a href="#about" class="nav__overlay-link" role="menuitem">About</a></li>
+            <li role="none"><a href="#experience" class="nav__overlay-link" role="menuitem">Experience</a></li>
+            <li role="none"><a href="#skills" class="nav__overlay-link" role="menuitem">Skills</a></li>
+            <li role="none"><a href="#projects" class="nav__overlay-link" role="menuitem">Projects</a></li>
+            <li role="none"><a href="#certifications" class="nav__overlay-link" role="menuitem">Certifications</a></li>
+            <li role="none"><a href="#contact" class="nav__overlay-link" role="menuitem">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header>
+        <nav class="nav" id="navbar" aria-label="Main Navigation">
+            <a href="#" class="nav__logo" aria-label="Ahmar Muzaffar Home">Ahmar</a>
+            <ul class="nav__links" id="navLinks" role="menubar">
+                <li role="none"><a href="#about" class="nav__link" role="menuitem">About</a></li>
+                <li role="none"><a href="#experience" class="nav__link" role="menuitem">Experience</a></li>
+                <li role="none"><a href="#skills" class="nav__link" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#projects" class="nav__link" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#certifications" class="nav__link" role="menuitem">Certifications</a></li>
+                <li role="none"><a href="#contact" class="nav__link" role="menuitem">Contact</a></li>
+            </ul>
+            <button class="nav__hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+                type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <canvas id="particles-canvas" aria-hidden="true" role="presentation"></canvas>
+
+            <!-- Decorative floating shapes -->
+            <svg class="hero__shape hero__shape--triangle" viewBox="0 0 100 100" aria-hidden="true">
+                <polygon points="50,5 95,97 5,97" fill="none" stroke="#00F5FF" stroke-width="1" />
+            </svg>
+            <svg class="hero__shape hero__shape--circle" viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="#FFD700" stroke-width="1" />
+            </svg>
+            <svg class="hero__shape hero__shape--diamond" viewBox="0 0 100 100" aria-hidden="true">
+                <rect x="10" y="10" width="80" height="80" rx="10" fill="none" stroke="#00F5FF" stroke-width="1"
+                    transform="rotate(45 50 50)" />
+            </svg>
+
+            <div class="hero__content">
+                <div class="hero__text">
+                    <p class="hero__greeting">&lt;hello world /&gt;</p>
+                    <h1 class="hero__title">Hi, I'm <span class="hero__highlight">Ahmar Muzaffar</span></h1>
+                    <div class="hero__typewriter"><span id="typewriter"></span><span class="hero__cursor-blink">|</span>
+                    </div>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="btn btn--primary" aria-label="View my projects">
+                            <i class="fas fa-rocket" aria-hidden="true"></i> View My Work
+                        </a>
+                        <a href="#contact" class="btn btn--secondary" aria-label="Download CV">
+                            <i class="fas fa-download" aria-hidden="true"></i> Download CV
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero__card-wrapper">
+                    <div class="hero__card" id="heroCard">
+                        <div class="hero__avatar" aria-hidden="true">
+                            <img src="assets/images/pfp.jpeg" alt="Ahmar Muzaffar" width="120" height="120"
+                                loading="eager">
+                        </div>
+                        <div class="hero__card-name">Ahmar Muzaffar</div>
+                        <div class="hero__card-role">Trainee Engineer (MIS)</div>
+                        <div class="hero__stats">
+                            <div class="hero__stat">
+                                <div class="hero__stat-num">5+</div>
+                                <div class="hero__stat-label">Projects</div>
+                            </div>
+                            <div class="hero__stat">
+                                <div class="hero__stat-num">3+</div>
+                                <div class="hero__stat-label">Certs</div>
+                            </div>
+                            <div class="hero__stat">
+                                <div class="hero__stat-num">2+</div>
+                                <div class="hero__stat-label">Years XP</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-header__title">About <span class="accent">Me</span></h2>
+                    <p class="section-header__subtitle">// getting to know ahmar</p>
+                </div>
+                <div class="about__grid">
+                    <div class="about__profile reveal">
+                        <div class="about__avatar" aria-hidden="true">
+                            <!-- PHOTO: Replace src with your image path — recommended size: 400x400px, square crop -->
+                            <img src="assets/images/pfp.jpeg" alt="Ahmar Muzaffar" width="150" height="150"
+                                loading="lazy">
+                        </div>
+                        <h3>Ahmar Muzaffar</h3>
+                        <p class="about__tagline">CS Undergrad &#183; MIS Engineer</p>
+                    </div>
+                    <div class="about__text reveal">
+                        <p>I'm a Computer Science undergraduate at <strong>Air University, Islamabad</strong>, currently
+                            halfway through my 3rd year. With a passion for building real-world systems, I combine my
+                            academic foundations in data structures, algorithms, and machine learning with hands-on
+                            industry experience.</p>
+                        <p>Currently serving as a <strong>Trainee Engineer (MIS)</strong> at the <strong>National
+                                Highway Authority</strong>, contributing to a high-impact ADB-funded CAREC
+                            infrastructure project. I was promoted from intern within just one month — a testament to my
+                            drive and technical capabilities.</p>
+                        <div class="about__timeline">
+                            <h4><i class="fas fa-graduation-cap" aria-hidden="true"></i> BSCS — Air University
+                                (2023–2027)</h4>
+                            <div class="about__progress-track">
+                                <div class="about__progress-fill"></div>
+                            </div>
+                            <div class="about__progress-labels">
+                                <span>Year 1</span><span>Year 2</span><span>Year 3 ✦</span><span>Year 4</span>
+                            </div>
+                        </div>
+                        <div class="about__badges">
+                            <span class="badge"><i class="fas fa-building" aria-hidden="true"></i> Currently @ NHA
+                                CAREC</span>
+                            <span class="badge"><i class="fas fa-globe" aria-hidden="true"></i> ADB-Funded
+                                Project</span>
+                            <span class="badge"><i class="fas fa-university" aria-hidden="true"></i> Air
+                                University</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-header__title">Work <span class="accent">Experience</span></h2>
+                    <p class="section-header__subtitle">// where i've contributed</p>
+                </div>
+                <div class="experience__timeline">
+                    <div class="experience__item reveal">
+                        <div class="experience__card">
+                            <div class="experience__date">Aug 2025 — Present</div>
+                            <h3>Trainee Engineer — MIS</h3>
+                            <div class="experience__company">National Highway Authority</div>
+                            <p>Contributing to MIS operations on an ADB-funded CAREC highway infrastructure project.
+                                Promoted from intern within one month.</p>
+                        </div>
+                    </div>
+                    <div class="experience__item reveal">
+                        <div class="experience__card">
+                            <div class="experience__date">Jul 2025 — Aug 2025</div>
+                            <h3>MIS Intern</h3>
+                            <div class="experience__company">National Highway Authority</div>
+                            <p>Assisted in data management and IT support for a major national highway construction
+                                project. Quickly demonstrated impact.</p>
+                        </div>
+                    </div>
+                    <div class="experience__item reveal">
+                        <div class="experience__card">
+                            <div class="experience__date">Aug 2024 — Sep 2024</div>
+                            <h3>Assistant IT Manager</h3>
+                            <div class="experience__company">Ambrose Aesthetics</div>
+                            <p>Managed IT infrastructure and provided technical support for daily business operations
+                                and digital processes.</p>
+                        </div>
+                    </div>
+                    <div class="experience__item reveal">
+                        <div class="experience__card">
+                            <div class="experience__date">Jul 2024 — Aug 2024</div>
+                            <h3>C++ Developer Intern</h3>
+                            <div class="experience__company">Digital Empowerment Network</div>
+                            <p>Developed C++ applications and honed problem-solving skills through real-world
+                                development challenges.</p>
+                        </div>
+                    </div>
+                    <div class="experience__item reveal">
+                        <div class="experience__card">
+                            <div class="experience__date">Sep 2020 — Jun 2022</div>
+                            <h3>Freelance Software Developer</h3>
+                            <div class="experience__company">Self-Employed</div>
+                            <p>Built custom software solutions for clients including desktop apps, automation scripts,
+                                and web projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-header__title">Tech <span class="accent">Stack</span></h2>
+                    <p class="section-header__subtitle">// tools of the trade</p>
+                </div>
+                <div class="skills__layout">
+                    <div class="skills__cube-scene reveal">
+                        <div class="skills__cube">
+                            <div class="skills__face">C++ / Python</div>
+                            <div class="skills__face">JavaScript</div>
+                            <div class="skills__face">Flutter</div>
+                            <div class="skills__face">Machine Learning</div>
+                            <div class="skills__face">SQL / Git</div>
+                            <div class="skills__face">Full Stack</div>
+                        </div>
+                    </div>
+                    <div class="skills__categories reveal">
+
+                        <div class="skills__category">
+                            <h3><i class="fas fa-code" aria-hidden="true"></i> Languages</h3>
+                            <div class="skills__pills">
+                                <span class="skills__pill">C++</span>
+                                <span class="skills__pill">Python</span>
+                                <span class="skills__pill">Java</span>
+                                <span class="skills__pill">JavaScript</span>
+                                <span class="skills__pill">C#</span>
+                                <span class="skills__pill">Dart</span>
+                                <span class="skills__pill">SQL</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__category">
+                            <h3><i class="fas fa-laptop-code" aria-hidden="true"></i> Frameworks &amp; Libraries</h3>
+                            <div class="skills__pills">
+                                <span class="skills__pill">HTML5</span>
+                                <span class="skills__pill">CSS3</span>
+                                <span class="skills__pill">React.js &amp; Next.js</span>
+                                <span class="skills__pill">Tailwind CSS</span>
+                                <span class="skills__pill">Flutter</span>
+                                <span class="skills__pill">Full Stack</span>
+                                <span class="skills__pill">UI/UX Design</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__category">
+                            <h3><i class="fas fa-brain" aria-hidden="true"></i> AI &amp; Machine Learning</h3>
+                            <div class="skills__pills">
+                                <span class="skills__pill">NumPy</span>
+                                <span class="skills__pill">Pandas</span>
+                                <span class="skills__pill">Scikit-learn</span>
+                                <span class="skills__pill">Logistic Regression</span>
+                                <span class="skills__pill">Jupyter</span>
+                                <span class="skills__pill">ML: Model Implementation &amp; Data Processing</span>
+                                <span class="skills__pill">AI Integration: OpenAI / Anthropic API</span>
+                                <span class="skills__pill">Prompt Engineering</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__category">
+                            <h3><i class="fas fa-tools" aria-hidden="true"></i> Tools &amp; Platforms</h3>
+                            <div class="skills__pills">
+                                <span class="skills__pill">MySQL</span>
+                                <span class="skills__pill">Git / GitHub</span>
+                                <span class="skills__pill">Linux</span>
+                                <span class="skills__pill">MS Office</span>
+                                <span class="skills__pill">Google AntiGravity</span>
+                                <span class="skills__pill">VS Code</span>
+                            </div>
+                        </div>
+
+                        <div class="skills__category">
+                            <h3><i class="fas fa-briefcase" aria-hidden="true"></i> Professional Skills</h3>
+                            <div class="skills__pills">
+                                <span class="skills__pill">Technical Documentation (READMEs &amp; API Docs)</span>
+                                <span class="skills__pill">System Design (Data Flow &amp; App Architecture)</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-header__title">Featured <span class="accent">Projects</span></h2>
+                    <p class="section-header__subtitle">// things i've built</p>
+                </div>
+                <div class="projects__grid">
+                    <article class="project-card reveal" data-tilt>
+                        <div class="project-card__icon">🧬</div>
+                        <h3>Breast Cancer Prediction</h3>
+                        <p>Machine learning classifier built on Kaggle breast cancer data, using Logistic Regression to
+                            predict diagnosis with high accuracy.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">Logistic Regression</span>
+                            <span class="tag">Pandas</span>
+                        </div>
+                    </article>
+                    <article class="project-card reveal" data-tilt>
+                        <div class="project-card__icon">👥</div>
+                        <h3>Employee Management System</h3>
+                        <p>Desktop CRUD application with a GUI for managing employee records, backed by SQL database and
+                            JDBC connectivity.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">JDBC</span>
+                            <span class="tag">GUI</span>
+                        </div>
+                    </article>
+                    <article class="project-card reveal" data-tilt>
+                        <div class="project-card__icon">🎮</div>
+                        <h3>Pong Game with AI Opponent</h3>
+                        <p>Classic Pong game with an adaptive AI opponent that adjusts difficulty dynamically, built
+                            with C++ and Raylib graphics library.</p>
+                        <div class="project-card__tags">
+                            <span class="tag">C++</span>
+                            <span class="tag">Raylib</span>
+                            <span class="tag">Game AI</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Projects Section -->
+        <section id="future-projects">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="future-projects__header-row">
+                        <h2 class="section-header__title">Future <span class="accent">Projects</span></h2>
+                        <span class="future-projects__badge">
+                            <span class="future-projects__dot"></span> In Development
+                        </span>
+                    </div>
+                    <p class="section-header__subtitle">// what's coming next</p>
+                </div>
+                <article class="future-card reveal" data-tilt>
+                    <div class="future-card__ribbon">COMING SOON</div>
+                    <div class="future-card__icon">🚗</div>
+                    <h3 class="future-card__title">MotoTrust</h3>
+                    <p class="future-card__tagline">A Forensic Video-AI Car Marketplace</p>
+                    <span class="future-card__status">FYP — Lead: AI &amp; Backend</span>
+                    <div class="future-card__tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Next.js 14</span>
+                        <span class="tag">Flutter</span>
+                        <span class="tag">YOLOv11</span>
+                        <span class="tag">EfficientNet</span>
+                        <span class="tag">Spring Boot</span>
+                        <span class="tag">EasyOCR</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <p class="future-card__desc">An AI-powered used-car marketplace built for Pakistan's peer-to-peer
+                        market. Replaces the self-declaration listing model with mandatory forensic verification — plate
+                        recognition, VIN extraction, damage segmentation, odometer OCR, repaint detection, and flood
+                        damage classification — all consolidated into a tamper-proof SHA-256 Integrity Score (0–100).
+                    </p>
+                    <div class="future-card__features">
+                        <span class="future-card__feature">360&#176; Guided Video Capture</span>
+                        <span class="future-card__feature">YOLOv11 Damage Segmentation</span>
+                        <span class="future-card__feature">ALPR + VIN OCR</span>
+                        <span class="future-card__feature">SHA-256 Audit Hash</span>
+                        <span class="future-card__feature">Integrity Score Engine</span>
+                        <span class="future-card__feature">Flood &amp; Repaint Detection</span>
+                    </div>
+                    <p class="future-card__role">Role: Lead — AI &amp; Backend &#183; Air University FYP &#183; Spring
+                        2026</p>
+                    <div class="future-card__progress">
+                        <div class="future-card__progress-track">
+                            <div class="future-card__progress-fill"></div>
+                        </div>
+                        <span class="future-card__progress-label">Architecture &amp; AI Pipeline — ~35%</span>
+                    </div>
+                    <div class="future-card__buttons">
+                        <span class="btn btn--disabled" aria-disabled="true">
+                            <i class="fas fa-external-link-alt" aria-hidden="true"></i> Live Soon
+                        </span>
+                        <span class="btn btn--disabled" aria-disabled="true">
+                            <i class="fas fa-lock" aria-hidden="true"></i> Repo Private
+                        </span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="section-header__title">Certif<span class="accent">ications</span></h2>
+                    <p class="section-header__subtitle">// validated knowledge</p>
+                </div>
+                <div class="certifications__row">
+                    <article class="cert-card reveal">
+                        <div class="cert-card__icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+                        <h3>Python for Data Science, AI &amp; Development</h3>
+                        <p>IBM — Coursera</p>
+                    </article>
+                    <article class="cert-card reveal">
+                        <div class="cert-card__icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+                        <h3>Python for Data Analysis: Pandas &amp; NumPy</h3>
+                        <p>IBM — Coursera</p>
+                    </article>
+                    <article class="cert-card reveal">
+                        <div class="cert-card__icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+                        <h3>Breast Cancer Prediction Using ML</h3>
+                        <p>Project-Based Certification</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2 class="contact__heading">Let's Build <span class="accent">Something</span></h2>
+                </div>
+                <div class="contact__cards reveal">
+                    <!-- Email rendered via JS to deter scrapers -->
+                    <a href="#" class="contact-card" id="emailCard" aria-label="Email Ahmar">
+                        <span class="contact-card__icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                        <div class="contact-card__text">
+                            <div class="contact-card__label">Email</div>
+                            <div class="contact-card__value" id="emailValue"></div>
+                        </div>
+                    </a>
+                    <a href="https://linkedin.com/in/ahmarm" target="_blank" rel="noopener noreferrer"
+                        class="contact-card" aria-label="LinkedIn Profile">
+                        <span class="contact-card__icon"><i class="fab fa-linkedin" aria-hidden="true"></i></span>
+                        <div class="contact-card__text">
+                            <div class="contact-card__label">LinkedIn</div>
+                            <div class="contact-card__value">linkedin.com/in/ahmarm</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/ahmarhoonmein" target="_blank" rel="noopener noreferrer"
+                        class="contact-card" aria-label="GitHub Profile">
+                        <span class="contact-card__icon"><i class="fab fa-github" aria-hidden="true"></i></span>
+                        <div class="contact-card__text">
+                            <div class="contact-card__label">GitHub</div>
+                            <div class="contact-card__value">github.com/ahmarhoonmein</div>
+                        </div>
+                    </a>
+                    <div class="contact-card" aria-label="Location">
+                        <span class="contact-card__icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                        <div class="contact-card__text">
+                            <div class="contact-card__label">Location</div>
+                            <div class="contact-card__value">Rawalpindi, Pakistan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <ul class="footer__links" aria-label="Footer navigation">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <p>&copy; 2025 Ahmar Muzaffar. Crafted with passion &amp; code.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
